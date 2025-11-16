@@ -7,11 +7,11 @@ This is my blog!! Here i'll be documenting my progress as a FullStack Dev
 
 You can check my work here on [Github](https://github.com/javiesp)
 
-![Astro Paper](public/astropaper-og.jpg)
+![Astro Paper](public/NSC-og.svg)
 
 I'm using an astro paper blog template to set-up this project faster. My vision as an [almost]engenieer is to optimize time\_ using diferent resources to develop clean and scalable code\_. 
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+The blog posts in this theme also serve as guides, docs or example articles\_ making NSC a flexible starting point for your next content-driven site.
 
 ## Features
 
@@ -77,6 +77,6 @@ and so much more is comming!!.
 
 ## Next Steps
 
-I'll be scalating this project to keep learning [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+I'll be scalating this project to keep learning [NSC](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
 
 Javi Dev! 👩🏽‍💻

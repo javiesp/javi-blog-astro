@@ -2,7 +2,7 @@
 author: Sat Naing
 pubDatetime: 2022-09-25T15:20:35Z
 modDatetime: 2025-06-13T16:46:34.155Z
-title: Customizing AstroPaper theme color schemes
+title: Customizing NSC theme color schemes
 featured: false
 draft: false
 tags:
@@ -10,7 +10,7 @@ tags:
   - docs
 description:
   How you can enable/disable light & dark mode; and customize color schemes
-  of AstroPaper theme.
+  of NSC theme.
 ---
 
 This post will explain how you can enable/disable light & dark mode for the website. Moreover, you'll learn how you can customize color schemes of the entire website.
@@ -19,7 +19,7 @@ This post will explain how you can enable/disable light & dark mode for the webs
 
 ## Enable/disable light & dark mode
 
-AstroPaper theme will include light and dark mode by default. In other words, there will be two color schemes\_ one for light mode and another for dark mode. This default behavior can be disabled in `SITE` configuration object.
+NSC theme will include light and dark mode by default. In other words, there will be two color schemes\_ one for light mode and another for dark mode. This default behavior can be disabled in `SITE` configuration object.
 
 ```js file="src/config.ts"
 export const SITE = {
@@ -27,8 +27,8 @@ export const SITE = {
   author: "Sat Naing",
   profile: "https://satnaing.dev/",
   desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "AstroPaper",
-  ogImage: "astropaper-og.jpg",
+  title: "NSC",
+  ogImage: "NSC-og.svg",
   lightAndDarkMode: true, // [!code highlight]
   postPerIndex: 4,
   postPerPage: 4,
@@ -76,7 +76,7 @@ To avoid color flickering on page reload, we have to place the toggle-switch Jav
 
 ## Customize color schemes
 
-Both light & dark color schemes of AstroPaper theme can be customized in the `global.css` file.
+Both light & dark color schemes of NSC theme can be customized in the `global.css` file.
 
 ```css file="src/styles/global.css"
 @import "tailwindcss";
@@ -103,7 +103,7 @@ html[data-theme="dark"] {
 /* ... */
 ```
 
-In the AstroPaper theme, the `:root` and `html[data-theme="light"]` selectors define the light color scheme, while `html[data-theme="dark"]` defines the dark color scheme.
+In the NSC theme, the `:root` and `html[data-theme="light"]` selectors define the light color scheme, while `html[data-theme="dark"]` defines the dark color scheme.
 
 To customize your own color scheme, specify your light colors inside `:root, html[data-theme="light"]`, and your dark colors inside `html[data-theme="dark"]`.
 
@@ -132,4 +132,4 @@ html[data-theme="light"] {
 /* ... */
 ```
 
-> Check out some [predefined color schemes](https://astro-paper.pages.dev/posts/predefined-color-schemes/) AstroPaper has already crafted for you.
+> Check out some [predefined color schemes](https://astro-paper.pages.dev/posts/predefined-color-schemes/) NSC has already crafted for you.
