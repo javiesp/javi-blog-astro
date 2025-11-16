@@ -1,15 +1,26 @@
 ---
+// Card.astro
 import { slugifyStr } from "@/utils/slugify";
-import type { CollectionEntry } from "astro:content";
 import { getPath } from "@/utils/getPath";
 import Datetime from "./Datetime.astro";
 
-export interface Props extends CollectionEntry<"blog"> {
+export interface CardProps {
+  id: string;
+  slug?: string;
+  filePath?: string;
+  data: {
+    title: string;
+    description: string;
+    pubDatetime: Date;
+    modDatetime?: Date;
+    timezone?: string;
+    tags: string[];
+    author: string;
+  };
   variant?: "h2" | "h3";
 }
 
-const { variant = "h2", data, id, filePath } = Astro.props;
-
+const { variant = "h2", data, id, slug, filePath } = Astro.props as CardProps;
 const { title, description, pubDatetime, modDatetime, timezone } = data;
 
 const headerProps = {
@@ -20,16 +31,14 @@ const headerProps = {
 
 <li class="my-6">
   <a
-    href={getPath(id, filePath)}
+    href={getPath(slug ?? id, filePath)}
     class="inline-block text-lg font-medium text-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
   >
-    {
-      variant === "h2" ? (
-        <h2 {...headerProps}>{title}</h2>
-      ) : (
-        <h3 {...headerProps}>{title}</h3>
-      )
-    }
+    {variant === "h2" ? (
+      <h2 {...headerProps}>{title}</h2>
+    ) : (
+      <h3 {...headerProps}>{title}</h3>
+    )}
   </a>
   <Datetime {pubDatetime} {modDatetime} {timezone} />
   <p>{description}</p>
